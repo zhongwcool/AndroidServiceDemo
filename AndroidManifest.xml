@@ -26,28 +26,28 @@
             android:label="@string/app_name" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.homer.MainActivity" />
+                android:value="com.homer.app.MainActivity" />
         </activity>
         <activity
             android:name="com.homer.receiver.PlayMusicRecevicerActivity"
             android:label="@string/app_name" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.homer.MainActivity" />
+                android:value="com.homer.app.MainActivity" />
         </activity>
         <activity
             android:name="com.homer.bind.PlayBindMusicActivity"
             android:label="@string/app_name" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.homer.MainActivity" />
+                android:value="com.homer.app.MainActivity" />
         </activity>
         <activity
             android:name="com.homer.remote.PlayRemoteMusicActivity"
             android:label="@string/app_name" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.homer.MainActivity" />
+                android:value="com.homer.app.MainActivity" />
         </activity>
 
         <service
