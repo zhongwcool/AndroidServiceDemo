@@ -10,6 +10,8 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.support.v4.app.NavUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -52,6 +54,17 @@ public class PlayRemoteMusicActivity extends Activity implements OnClickListener
 	private void connection() {
 		Intent intent = new Intent("com.homer.remote.remoteMusicReceiver");
 		bindService(intent, sc, Context.BIND_AUTO_CREATE);				// bindService
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		if (item.getItemId() == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        }
+		
+		return super.onOptionsItemSelected(item);
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package com.homer.service;
 
 import java.io.IOException;
 
+import com.alex.log.LogUtils;
 import com.homer.app.R;
 
 import android.app.Service;
@@ -19,7 +20,7 @@ import android.widget.Toast;
  */
 
 public class MusicService extends Service {
-	private static final String TAG = "MyService";
+	private static final String TAG = LogUtils.makeLogTag(MusicService.class);
 
 	private MediaPlayer mediaPlayer;
 
@@ -35,7 +36,7 @@ public class MusicService extends Service {
 
 		if (mediaPlayer == null) {
 			mediaPlayer = MediaPlayer.create(this, R.raw.tmp);
-			mediaPlayer.setLooping(false);
+			mediaPlayer.setLooping(true);
 		}
 	}
 

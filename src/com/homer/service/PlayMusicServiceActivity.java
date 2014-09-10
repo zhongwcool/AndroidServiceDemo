@@ -1,5 +1,6 @@
 package com.homer.service;
 
+import com.alex.log.LogUtils;
 import com.homer.app.R;
 
 import android.app.Activity;
@@ -18,6 +19,7 @@ import android.widget.Button;
  */
 
 public class PlayMusicServiceActivity extends Activity implements OnClickListener {
+	private final static String TAG = LogUtils.makeLogTag(PlayMusicServiceActivity.class);
 
 	private Button playBtn;
 	private Button stopBtn;
@@ -88,7 +90,13 @@ public class PlayMusicServiceActivity extends Activity implements OnClickListene
 		bundle.putInt("op", op);
 		intent.putExtras(bundle);
 		
-		startService(intent);							// startService
+		/*
+		 * Return the context of the single, global Application object of the current process. 
+		 * This generally should only be used if you need a Context whose lifecycle is 
+		 * separate from the current context, that is tied to the lifetime of the process 
+		 * rather than the current component.
+		 * */
+		this.getApplicationContext().startService(intent);							// startService
 	}
 	
 	@Override
