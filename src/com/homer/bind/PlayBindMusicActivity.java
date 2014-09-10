@@ -1,5 +1,7 @@
 package com.homer.bind;
 
+import com.homer.app.R;
+
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -10,8 +12,6 @@ import android.os.IBinder;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
-import com.homer.R;
 
 /**
  * @author 	sunboy_2050

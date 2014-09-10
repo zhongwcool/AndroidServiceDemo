@@ -2,14 +2,14 @@ package com.homer.receiver;
 
 import java.io.IOException;
 
+import com.homer.app.R;
+
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.widget.Toast;
-
-import com.homer.R;
 
 /**
  * @author 	sunboy_2050

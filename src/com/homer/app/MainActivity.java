@@ -1,4 +1,4 @@
-package com.homer;
+package com.homer.app;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.homer.app.R;
 import com.homer.bind.PlayBindMusicActivity;
 import com.homer.receiver.PlayMusicRecevicerActivity;
 import com.homer.remote.PlayRemoteMusicActivity;

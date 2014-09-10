@@ -1,13 +1,13 @@
 package com.homer.receiver;
 
+import com.homer.app.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
-import com.homer.R;
 
 /**
  * @author 	sunboy_2050
