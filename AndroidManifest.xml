@@ -81,6 +81,16 @@
                 <action android:name="com.homer.service.musicReceiverService" />
             </intent-filter>
         </service>
+        
+        <!-- added for detect the exit event of any browser -->
+        <service
+            android:name="com.alex.service.BrowserDetectService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.alex.service.browserdetectservice" />
+            </intent-filter>
+        </service>
 
         <receiver
             android:name="com.homer.receiver.MusicReceiver"

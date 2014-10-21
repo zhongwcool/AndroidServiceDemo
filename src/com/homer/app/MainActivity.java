@@ -1,6 +1,7 @@
 package com.homer.app;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button musicReceiverBtn;
 	private Button bindMusicServiceBtn;
 	private Button remoteMusicServiceBtn;
+	private Button dialogTest;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,13 @@ public class MainActivity extends Activity implements OnClickListener {
 		musicReceiverBtn = (Button) findViewById(R.id.musicReceiver);
 		bindMusicServiceBtn = (Button) findViewById(R.id.bindMusicService);
 		remoteMusicServiceBtn = (Button) findViewById(R.id.remoteMusicService);
+		dialogTest = (Button) findViewById(R.id.dialogTest);
 		
 		musicServiceBtn.setOnClickListener(this);
 		musicReceiverBtn.setOnClickListener(this);
 		bindMusicServiceBtn.setOnClickListener(this);
 		remoteMusicServiceBtn.setOnClickListener(this);
+		dialogTest.setOnClickListener(this);
 	}
 
 	@Override
@@ -54,6 +58,13 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.remoteMusicService:
 			startActivity(new Intent(this, PlayRemoteMusicActivity.class));
 			break;
+			
+		case R.id.dialogTest:{
+			ProgressDialog pd = new ProgressDialog(this);
+			pd.setMessage("dialog test of KEYEVENT");
+			pd.setCancelable(false);
+			pd.show();
+		}break;
 		}
 	}
 
